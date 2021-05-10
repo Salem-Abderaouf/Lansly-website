@@ -1,0 +1,23 @@
+:root{
+  --main-color:#667eea;
+  --co-color:#ea3b6c;
+  --Third-color:#FF9A83;
+  --fourth-color:#8B8DB9;
+  --black-color:#454555;
+  --grey-color:#eff0f5;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+}
+.brand-image{
+  height: 75px;
+  width: 75px;
+}
+.hero-image-container{
+  background-color: var(--main-color);
+}
