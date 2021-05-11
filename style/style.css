@@ -1,5 +1,5 @@
 :root{
-  --main-color:#667eea;
+  --main-color:#4f46e5;
   --co-color:#ea3b6c;
   --Third-color:#FF9A83;
   --fourth-color:#8B8DB9;
@@ -14,10 +14,52 @@
 body{
   height: 100vh;
 }
+button{
+  background: transparent;
+  border: none;
+}
+.nav-link{
+  color: var(--black-color);
+  font-size: 18px;
+  text-decoration: none;
+  transition: color .3s linear;
+}
+.nav-link:hover{
+  color: var(--main-color);
+}
+.bg-co-color{
+  transition: background-color .3s linear;
+  background-color: var(--co-color);
+}
+.bg-co-color:hover{
+  background-color: #f74779;
+}
+.title-color{
+  color: var(--co-color);
+}
 .brand-image{
   height: 75px;
   width: 75px;
 }
 .hero-image-container{
   background-color: var(--main-color);
+}
+.hero-color{
+  color: var(--main-color);
+}
+.active{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+}
+#nav-screen{
+  display: none;
+}
+svg{
+  height: 24px;
+  width: 24px;
+  fill: white !important;
+  stroke-width: 6;
 }
