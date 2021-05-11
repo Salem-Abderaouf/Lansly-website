@@ -8,15 +8,36 @@
   <title>Lansly</title>
   <link rel="stylesheet" href="style/style.css">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="./app.js"></script>
 </head>
 
 <body>
-  <div class="container flex justify-between items-center	 mx-auto">
+  <!--Header -->
+  <div id="nav-screen" class="bg-white absolute z-10 h-screen w-full flex justify-center items-center">
+    <div class="absolute right-10 top-10">
+      <button id="header-close-button">
+        <ion-icon class="mr-2" name="close" size="large"></ion-icon>
+      </button>
+    </div>
+    <div>
+      <ul>
+        <li class="my-4"><a class="nav-link" href="why.html">Why this app</a></li>
+        <li class="my-4"><a class="nav-link" href="terms.html">Terms & conditions</a></li>
+        <li class="my-4"><a class="nav-link" href="help.html">Help</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container flex justify-between items-center	 mx-auto dark:bg-gray-800">
     <!--Information Component-->
+
     <div class="h-screen p-4 lg:p-0 w-full lg:w-1/2 ">
       <div class="flex justify-between items-center bg-white">
-        <img src="assets/lansly.png" class="brand-image mt-2" />
-        <ion-icon class="cursor-pointer" name="filter" size="large"></ion-icon>
+        <a href="/">
+          <img src="assets/lansly.png" class="brand-image mt-2" />
+        </a>
+        <button id="header-open-button">
+          <ion-icon class="cursor-pointer" name="filter" size="large"></ion-icon>
+        </button>
       </div>
       <!--Lansly Information-->
       <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
@@ -35,7 +56,7 @@
             <div class="rounded-md shadow">
 
               <a href="https://play.google.com/store/apps/details?id=com.lansly"
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                class="w-full bg-co-color flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10">
                 <ion-icon class="mr-2" name="logo-google-playstore" size="large"></ion-icon>
                 Get the app
               </a>
@@ -54,7 +75,143 @@
     <div class="m-8 xlg:flex lg:flex hidden sm:hidden lg:w-1/2  rounded-xl hero-image-container">
       <img class="center" src="assets/hero.png" />
     </div>
-    <!---->
+  </div>
+  <!-- Features -->
+  <div class="container relative py-12 bg-white mb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Why Lansly</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          THINK AND SPEAK
+          NO GRAMMAR TO BREAK
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Developing four skills together in one learning process, receptive skills, reading and listening as well as
+          productive skills, writing, and speaking.
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="relative shadow-xl	 rounded-2xl p-4">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-co-color text-white">
+                <!-- Heroicon name: outline/globe-alt -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101">
+                  <path
+                    d="M92.55,45.12a12.11,12.11,0,0,0-4.49-9.41A8.26,8.26,0,0,0,88.25,34a9.15,9.15,0,0,0-7.79-9,7.94,7.94,0,0,0-.24-4,8.55,8.55,0,0,0-2-3.24,10.17,10.17,0,0,0-5.46-3.32,1.49,1.49,0,0,0-.59-.12l-.3,0a7.89,7.89,0,0,0-1.8.11,9.66,9.66,0,0,0-3.35-5.65,9.54,9.54,0,0,0-7.6-2.06A9.81,9.81,0,0,0,51,16.44V81.8A12.14,12.14,0,0,0,63.17,94.31a12.18,12.18,0,0,0,10.67-6.24,9.57,9.57,0,0,0,1.4.2,10.94,10.94,0,0,0,11.63-10.2,10.59,10.59,0,0,0-.4-3.64A14.16,14.16,0,0,0,89,53.58,12.06,12.06,0,0,0,92.55,45.12ZM89.49,62.8a11.16,11.16,0,0,1-4.27,8.8A10.68,10.68,0,0,0,76,66.23a1.5,1.5,0,0,0,0,3,8,8,0,0,1,7.23,5.15,7.86,7.86,0,0,1,.6,3.49,8,8,0,0,1-8.44,7.4,7.8,7.8,0,0,1-1.93-.4,1.5,1.5,0,0,0-1.85.84,9.21,9.21,0,0,1-10.11,5.46A9.44,9.44,0,0,1,54,81.8V16.44a6.8,6.8,0,0,1,5.57-6.79,7.06,7.06,0,0,1,1.07-.08,6.52,6.52,0,0,1,4.17,1.49,6.66,6.66,0,0,1,2.41,4.68A9.13,9.13,0,0,0,63,23.4a1.5,1.5,0,1,0,3,0,6.14,6.14,0,0,1,5.84-6.12c1.15.11,2.48.72,4.18,2.5a5.58,5.58,0,0,1,1.32,2.09,5.31,5.31,0,0,1-.11,3.5,1.5,1.5,0,0,0-.08.51s0,.08,0,.11v0a1.5,1.5,0,0,0,1.56,1.87l.38,0A6.14,6.14,0,0,1,85.25,34a6,6,0,0,1-.32,1.85,1.5,1.5,0,0,0,.59,1.7A9.06,9.06,0,0,1,86.37,52a1.49,1.49,0,0,0-.21.23,9,9,0,0,1-5.3,1.71,9.13,9.13,0,0,1-9.12-9.12,1.5,1.5,0,1,0-3,0A12.14,12.14,0,0,0,80.85,56.92a12,12,0,0,0,5.82-1.48A11.12,11.12,0,0,1,89.49,62.8Z" />
+                  <path
+                    d="M38.89,6.69a9.54,9.54,0,0,0-7.6,2.06,9.66,9.66,0,0,0-3.35,5.65,8,8,0,0,0-1.66-.12H26.1a1.49,1.49,0,0,0-.35,0c-1.73.19-3.73,1.06-6,3.39a8.54,8.54,0,0,0-2,3.24,7.93,7.93,0,0,0-.24,4,9.15,9.15,0,0,0-7.79,9,8.26,8.26,0,0,0,.18,1.71A12.05,12.05,0,0,0,9,53.58a14.16,14.16,0,0,0,2.58,20.84,10.59,10.59,0,0,0-.4,3.64,10.94,10.94,0,0,0,11.63,10.2,9.58,9.58,0,0,0,1.4-.2,12.18,12.18,0,0,0,10.67,6.24A12.14,12.14,0,0,0,47,81.8V16.44A9.81,9.81,0,0,0,38.89,6.69ZM44,81.8a9.44,9.44,0,0,1-7.55,9.37,9.22,9.22,0,0,1-10.11-5.46A1.5,1.5,0,0,0,25,84.79a1.48,1.48,0,0,0-.46.07,7.8,7.8,0,0,1-1.93.4,7.94,7.94,0,0,1-8.44-7.4,7.86,7.86,0,0,1,.6-3.48,8.33,8.33,0,0,1,7.49-5.15,1.5,1.5,0,1,0,0-3,11.28,11.28,0,0,0-9.42,5.38,11.13,11.13,0,0,1-1.38-16.28A12.11,12.11,0,0,0,29.53,44.8a1.5,1.5,0,0,0-3,0,9.12,9.12,0,0,1-14.45,7.41,1.48,1.48,0,0,0-.43-.21l0,0a9.06,9.06,0,0,1,.85-14.43,1.5,1.5,0,0,0,.59-1.7A6,6,0,0,1,12.75,34a6.14,6.14,0,0,1,6.19-6.12h0l.3,0a1.48,1.48,0,0,0,1.26-.53,1.5,1.5,0,0,0,.3-1.33v0s0-.08,0-.11a1.5,1.5,0,0,0-.08-.51,5.3,5.3,0,0,1-.11-3.5A5.57,5.57,0,0,1,22,19.78c1.74-1.82,3.1-2.42,4.27-2.5a6.14,6.14,0,0,1,6,6.13,1.5,1.5,0,1,0,3,0,9.13,9.13,0,0,0-4.43-7.82,6.66,6.66,0,0,1,2.39-4.53,6.59,6.59,0,0,1,5.24-1.41A6.8,6.8,0,0,1,44,16.44Z" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Think</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              Most of the people who are going to learn English used to think in their mother tongue before they produce
+              new sentences The obstacle of translation stays as a barrier in front of them With lansly we create a
+              technique to allow the learner by time to express his/her ideas without translation to the mother tongue.
+              Thus she/he is capable to think in English which is the key to become native
+            </dd>
+          </div>
+
+          <div class="relative shadow-xl	 rounded-2xl p-4">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-co-color text-white">
+                <!-- Heroicon name: outline/scale -->
+                <?xml version="1.0" encoding="utf-8"?><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 110.26 122.88"
+                  style="enable-background:new 0 0 110.26 122.88" xml:space="preserve">
+                  <style type="text/css">
+                    .st0 {
+                      fill-rule: evenodd;
+                      clip-rule: evenodd;
+                    }
+                  </style>
+                  <g>
+                    <path class="st0"
+                      d="M10.69,55.55C5.74,57,3.64,62.09,3.71,67.87c0.03,2.61,0.5,5.35,1.35,8c0.85,2.64,2.07,5.15,3.62,7.31 c3.52,4.93,8.76,7.94,14.9,5.83c0.46-0.16,0.95-0.12,1.36,0.07c0.1-0.04,0.2-0.07,0.31-0.11c1.53-0.5,2.95-0.93,4.24-1.32 c1.44-0.43,2.8-0.82,4.08-1.16c0.99-0.27,2.01,0.32,2.28,1.31c0.02,0.07,0.03,0.14,0.04,0.21c0.18,0.81,0.37,1.62,0.55,2.43 c1.41,6.28,2.77,12.34,4.59,17.26c0.03,0.09,0.27,0.76,0.52,1.43c1.12,3.1,2.33,6.41,3.88,8.36c1.37,1.71,3.26,2.22,6.2-0.08 c0.55-0.52,1.11-1,1.68-1.49c1.75-1.51,3.51-3.01,4.15-5.27c-0.4-0.55-1.17-0.88-1.94-1.21c-2.57-1.09-5.14-2.19-4.45-7.59 c0.03-0.28,0.07-0.53,0.1-0.78c0.2-1.58,0.31-2.39,0.21-2.74c-0.05-0.19-0.44-0.54-1.21-1.25l-0.28-0.26 c-1.52-1.39-2.06-3.38-2.04-5.53c0.02-2.53,0.85-5.31,1.68-7.31c0.26-0.63,0.83-1.04,1.46-1.13l0,0 c19.22-2.66,30.94,0.68,40.26,3.34c0.4,0.11,0.8,0.23,1.19,0.34c-8.32-8.58-15.14-21.58-19.81-34.9 c-4.93-14.07-7.46-28.61-6.8-38.79c-7.62,11.26-20.99,29.14-52.86,40.86c-0.03,0.01-0.06,0.02-0.09,0.03l-0.25,0.09 c-0.33,0.12-0.38,0.09-0.43,0.13c-0.07,0.06,0,0.06-0.13,0.27c-0.02,0.03,0.04-0.07-0.34,0.53C11.49,55.15,11.11,55.42,10.69,55.55 L10.69,55.55L10.69,55.55z M90.07,52.82c0,4.61-4.52,12.9-7.35,13.06c4.82,9.44,10.74,17.61,17.41,22.49 c0.39,0.05,0.75,0.08,1.09,0.06c0.65-0.02,1.29-0.2,1.99-0.64c1.52-1.53,2.48-3.93,2.97-6.96c1.5-9.34-1.56-23.97-6.69-38.05 C94.35,28.67,87.17,15.22,80.46,8.26C78,5.71,75.68,4.11,73.67,3.78c-0.51-0.08-0.8-0.1-0.94-0.05c-0.17,0.06-0.43,0.3-0.84,0.71 c-0.2,0.2-0.4,0.42-0.61,0.66c-0.02,0.06-0.05,0.12-0.07,0.17c-3.14,6.48-2.12,20.47,1.95,35.47l0,0 C76.23,39.3,90.07,40.94,90.07,52.82L90.07,52.82z M99.94,92.08c-0.4,0.08-0.83,0.02-1.21-0.18c-0.35-0.06-0.7-0.14-1.07-0.21 c-2.42-0.5-4.83-1.19-7.43-1.93c-8.81-2.51-19.86-5.66-37.66-3.38c-0.55,1.52-1.01,3.33-1.02,4.94c-0.01,1.16,0.21,2.18,0.83,2.75 l0.28,0.26c1.32,1.2,1.97,1.79,2.3,3.04c0.28,1.04,0.14,2.09-0.13,4.17c-0.03,0.24-0.06,0.5-0.1,0.78 c-0.33,2.62,0.95,3.17,2.23,3.71c1.66,0.71,3.33,1.42,4.15,3.69c0.14,0.33,0.19,0.71,0.12,1.09c-0.75,3.84-3.13,5.89-5.52,7.94 c-0.53,0.46-1.06,0.91-1.56,1.38l0,0c-0.04,0.04-0.08,0.07-0.12,0.11c-5.2,4.16-8.77,2.99-11.5-0.42 c-1.95-2.44-3.26-6.04-4.48-9.41c-0.1-0.29-0.21-0.57-0.52-1.42c-1.89-5.1-3.28-11.31-4.72-17.73l-0.15-0.65 c-0.72,0.2-1.43,0.41-2.13,0.62c-1.45,0.43-2.84,0.86-4.17,1.29c-0.17,0.05-0.28,0.1-0.37,0.14c-0.87,0.35-1.26,0.5-2.04,0.14 c-7.65,2.23-14.04-1.46-18.32-7.45C3.89,82.86,2.49,79.99,1.53,77C0.57,74.01,0.04,70.89,0,67.9c-0.08-7.1,2.62-13.44,8.94-15.68 c0.31-0.51,0.49-0.79,0.88-1.12c0.44-0.37,0.8-0.5,1.55-0.77l0.24-0.09c0.03-0.01,0.06-0.02,0.09-0.03 C44.41,38.17,56.97,19.42,64.11,8.75c2-2.98,3.59-5.36,5.16-6.93c0.77-0.77,1.36-1.26,2.16-1.56c0.83-0.31,1.64-0.33,2.82-0.14 c2.86,0.46,5.87,2.45,8.88,5.57c7.06,7.32,14.55,21.28,19.85,35.84c5.31,14.6,8.47,29.91,6.86,39.89 c-0.62,3.88-1.96,7.03-4.16,9.15l0,0c-0.07,0.07-0.16,0.14-0.25,0.2c-1.4,0.95-2.72,1.32-4.08,1.38 C100.88,92.16,100.41,92.13,99.94,92.08L99.94,92.08z" />
+                  </g>
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Speak</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              You speak English based on how many sentences are memorized in your mind or how many texts you have read.
+              Using lansly you will be able to speak continuously without hesitation or carrying about making mistakes
+              .because you have already trained to the brain on correct patterns and they will be produced automatically
+            </dd>
+          </div>
+
+          <div class="relative shadow-xl	 rounded-2xl p-4">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-co-color text-white">
+                <!-- Heroicon name: outline/lightning-bolt -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">No grammar to break</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              Fearness of making grammar mistakes through the learning process stop many people to continue their
+              journey for mastering the English language lansly app considers this issue and suggest a set of strategies
+              to overcome that fearness the learner can acquire the basic grammar rules effortlessly just by following
+              the instructions that mentioned in the app
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <br>
+    </div>
+  </div>
+  <!-- Our Team -->
+  <div class="py-12 bg-white mt-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          Meet our team
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Each time we learn from our mistakes
+          and keep going toward our best results
+        </p>
+      </div>
+    </div>
+    <div class="mt-10 mx-4">
+      <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+        <div class="relative p-4">
+          <dt>
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-full text-white">
+              <img src="assets/lansly.png" class="team-member" />
+            </div>
+            <p class="ml-16 text-lg leading-6 font-semibold text-gray-900">Selama Salem Abderaouf</p>
+            <p class="ml-16 text-md leading-6 font-medium title-color">DEVELOPER</p>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">
+            Engineering student at the National Higher School of Biotechnology,
+            with high tendency towards technology.
+            Autodidact mobile developer and front end developer
+          </dd>
+        </div>
+
+        <div class="relative p-4">
+          <dt>
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-full text-white">
+              <img src="assets/lansly.png" class="team-member" />
+            </div>
+            <p class="ml-16 text-lg leading-6 font-semibold text-gray-900">Aouissi Khaled</p>
+            <p class="ml-16 text-md leading-6 font-medium title-color">ENGLISH COACH</p>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">
+            More than 8 years of experience
+            in teaching english language and developing syllabus.
+            as well as holding ESL certificate
+          </dd>
+        </div>
+      </dl>
+    </div>
   </div>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
