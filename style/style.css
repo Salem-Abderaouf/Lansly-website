@@ -6,12 +6,18 @@
   --black-color:#454555;
   --grey-color:#eff0f5;
 }
+@font-face{
+  src:url('../assets/Poppins-Regular.ttf');
+  font-display: block;
+  font-family: Poppins;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body{
+  font-family: Poppins !important;
   height: 100vh;
 }
 button{
